@@ -8,18 +8,18 @@ public class Spawner : MonoBehaviour
 
     public GameObject spawnee;
 
-    //public float spawnTimer;
+    
 
 
     void Start()
     {
-
-            Instantiate(spawnee, transform.position, Quaternion.identity);
+        GameObject enemyShip = Instantiate(spawnee, transform.position, Quaternion.identity);
+        Destroy(enemyShip, 4f);
 
     }
 
-	  void Update ()
+    private void FixedUpdate()
     {
 
-	}
+    }
 }

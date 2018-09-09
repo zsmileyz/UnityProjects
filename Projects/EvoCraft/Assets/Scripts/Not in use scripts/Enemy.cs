@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
-    
+    public float health = 10;
+
 
 
 
@@ -19,6 +20,43 @@ public class Enemy : MonoBehaviour
 
 	void Update ()
     {
-        transform.Translate(-speed * Time.deltaTime, 0f, 0f);
+        Moving();
+        EnemyHealth();
 	}
+
+    void EnemyHealth()
+    {
+       if (health <= 0)
+        {
+            Destroy(this);
+        }
+
+    }
+
+    void isHit()
+    {
+
+    }
+
+
+    void Moving()
+    {
+        transform.Translate(-speed * Time.deltaTime, 0f, 0f);
+        
+    }
+
+    public void TakeDamage(float amount)
+    {
+        health = -amount;
+        if(health <= 0f)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(this);
+    }
+
 }
