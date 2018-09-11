@@ -13,23 +13,35 @@ public class Enemy : MonoBehaviour
 
 
 
+
+
+
+
     void Start ()
     {
-       
+        
 
     }
 	
 
-	void Update ()
+	void FixedUpdate ()
     {
         Moving();
-	}
+        StartCoroutine("Die");
+    }
 
 
 
     void Moving()
     {
-        transform.Translate(-speed * Time.deltaTime, 0f, 0f);
+        if(health != 0)
+        {
+            transform.Translate(-speed * Time.deltaTime, 0f, 0f);
+        }        
+        if(health <= 0)
+        {
+            transform.Translate(5f * Time.deltaTime, -1f * Time.deltaTime, 0f);
+        }
         
     }
 
@@ -38,19 +50,19 @@ public class Enemy : MonoBehaviour
         if(hit.tag == "laser")
         {
             health -= 1f;
-            if(health <= 0)
-            {
-                Die();
-            }
+            
         }
     }
-
-    IEnumerable Die()
+   
+    IEnumerator Die()
     {
-        yield return new WaitForSeconds(1f);
+        if (health <= 0)
+        {
 
-        Destroy(gameObject);
-        Debug.Log("DEAD");
+            yield return new WaitForSeconds(1f);
+            Destroy(gameObject);
+            Debug.Log("DEAD");
+        }
     }
 
 }

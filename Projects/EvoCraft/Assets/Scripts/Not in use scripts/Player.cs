@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float health = 3;
     public bool isDead = false;
     public bool damaged = false;
-    
+
 
 
     void Start ()
@@ -47,13 +47,22 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision hit)
     {
-        health -= 1f;
-        Debug.Log("hit");
+        if (hit.gameObject.tag == "Enemy")
+        {
+            health -= 1f;
+            Debug.Log("hit");
+        }
         if (health <= 0)
         {
-            isDead = true;
+            Die();
             Debug.Log("DEAD!");
         }
+    }
+
+    
+    void Die()
+    {
+        Destroy(gameObject);
     }
 
 

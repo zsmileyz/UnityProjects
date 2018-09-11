@@ -6,6 +6,11 @@ public class GunBarrel : MonoBehaviour
 {
     public GameObject spawnee;
 
+    public float nextFire;
+
+    public float fireRate = 1f;
+
+
 	void Start ()
     {
 		
@@ -20,9 +25,11 @@ public class GunBarrel : MonoBehaviour
 
     void Shooting()
     {
-        if(Input.GetButton("Fire1"))
+        if(Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRate;
             GameObject Shot = Instantiate(spawnee, transform.position, Quaternion.identity);
+
             Destroy(Shot, 4f);
         }
 
