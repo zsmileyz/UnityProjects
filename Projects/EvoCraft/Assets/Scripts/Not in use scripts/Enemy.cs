@@ -45,8 +45,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    IEnumerable Die()
     {
+        yield return new WaitForSeconds(1f);
+
         Destroy(gameObject);
         Debug.Log("DEAD");
     }
