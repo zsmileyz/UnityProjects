@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
-    public float health = 10;
+    public float health = 10f;
 
 
 
@@ -21,17 +21,7 @@ public class Enemy : MonoBehaviour
 	void Update ()
     {
         Moving();
-        EnemyHealth();
 	}
-
-    void EnemyHealth()
-    {
-       if (health <= 0)
-        {
-            Destroy(this);
-        }
-
-    }
 
     void isHit()
     {
@@ -47,11 +37,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        health = -amount;
-        if(health <= 0f)
-        {
-            Die();
-        }
+        health -= amount;
     }
 
     void Die()
