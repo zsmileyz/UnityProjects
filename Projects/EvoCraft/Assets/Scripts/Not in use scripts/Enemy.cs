@@ -6,7 +6,9 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
-    public float health = 10f;
+    public float damage = 10f;
+
+    public float health = 1f;
 
 
 
@@ -23,10 +25,6 @@ public class Enemy : MonoBehaviour
         Moving();
 	}
 
-    void isHit()
-    {
-
-    }
 
 
     void Moving()
@@ -35,14 +33,22 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void TakeDamage(float amount)
+    private void OnTriggerEnter(Collider hit)
     {
-        health -= amount;
+        if(hit.tag == "laser")
+        {
+            health -= 1f;
+            if(health <= 0)
+            {
+                Die();
+            }
+        }
     }
 
     void Die()
     {
-        Destroy(this);
+        Destroy(gameObject);
+        Debug.Log("DEAD");
     }
 
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class GunBarrel : MonoBehaviour
 {
     public GameObject spawnee;
-    float decay = 100f;
 
 	void Start ()
     {

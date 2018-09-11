@@ -6,11 +6,15 @@ public class Laser : MonoBehaviour
 {
     public float speed = 10f;
 
+
+
     public float damage = 10f;
+
+
 
 	void Start ()
     {
-        
+ 
 	}
 	
 
@@ -26,9 +30,14 @@ public class Laser : MonoBehaviour
         transform.Translate(speed * Time.deltaTime, 0f, 0f);
     }
 
-    void OnTriggerEnter(Collider hit)
+    private void OnTriggerEnter(Collider hit)
     {
-        hit.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+        if(hit.tag == "Enemy")
+        {
+            Debug.Log("HitEnemy!!");
+        }
+            
+        
     }
 
 

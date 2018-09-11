@@ -5,9 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public float health = 3;
+    public bool isDead = false;
+    public bool damaged = false;
+    
 
 
-	void Start ()
+    void Start ()
     {
 		
 	}
@@ -40,14 +44,18 @@ public class Player : MonoBehaviour
             transform.Translate(0f, -speed * Time.deltaTime, 0f);
          }
         }
-    
 
-    
-
-
-
-
-
+    private void OnCollisionEnter(Collision hit)
+    {
+        health -= 1f;
+        Debug.Log("hit");
+        if (health <= 0)
+        {
+            isDead = true;
+            Debug.Log("DEAD!");
+        }
+    }
 
 
 }
+

@@ -8,12 +8,15 @@ public class Spawner : MonoBehaviour
 
     public GameObject spawnee;
 
-    public float spawnerTimer;
+    public float spawnTimer = 5f;
+    public float spawnDelay = 5f;
+
 
 
     void Start()
     {
-        StartCoroutine(spawn());
+        spawn();
+        invoke();
 
 
     }
@@ -23,14 +26,14 @@ public class Spawner : MonoBehaviour
         
     }
 
-    IEnumerator spawn()
+    void spawn()
     {
-        yield return new WaitForSeconds(spawnerTimer);
-
-
         GameObject enemyShip = Instantiate(spawnee, transform.position, Quaternion.identity);
-        Destroy(enemyShip, 4f);
+        Destroy(enemyShip, 4f);       
+    }
 
-        
+    void invoke()
+    {
+        InvokeRepeating("spawn", spawnTimer, spawnDelay);
     }
 }

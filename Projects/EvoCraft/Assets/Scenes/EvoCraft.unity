@@ -190,6 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 110447142}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &237817501
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,8 +217,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 237817501}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.86, y: -6.632, z: 0.06}
-  m_LocalScale: {x: 0.985, y: 19.758373, z: 1}
+  m_LocalPosition: {x: -1.919, y: -6.632, z: 0.06}
+  m_LocalScale: {x: 0.985, y: 19.876925, z: 1}
   m_Children: []
   m_Father: {fileID: 1386663855}
   m_RootOrder: 3
@@ -479,6 +481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  health: 3
+  isDead: 0
+  damaged: 0
 --- !u!1 &994204906
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1257182626}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &1308689809
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1318174241}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &1386663854
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1405773688}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &1509584178
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 1660490809}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &2086795342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 2086795343}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 5
+  spawnDelay: 5
 --- !u!1 &2089867626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,3 +1091,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 2089867627}
   spawnee: {fileID: 1540041286198810, guid: 98e0f63e3271dd8478b9e2cf3561ad99, type: 2}
+  spawnTimer: 1
+  spawnDelay: 1
