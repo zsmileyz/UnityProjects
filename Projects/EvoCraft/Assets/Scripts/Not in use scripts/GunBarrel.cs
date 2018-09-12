@@ -39,4 +39,12 @@ public class GunBarrel : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider hit)
+    {
+        if(hit.gameObject.tag == "Enemy")
+        {
+            Player.health -= 1f;
+            Debug.Log("HitPlayer");
+        }
+    }
 }

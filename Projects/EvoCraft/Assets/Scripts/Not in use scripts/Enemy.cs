@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
-    public float damage = 10f;
+    public static float damage = 10f;
 
     public float health = 1f;
 
@@ -15,8 +15,10 @@ public class Enemy : MonoBehaviour
 
 
 
+
     private void Awake()
     {
+
     }
 
 
@@ -56,10 +58,10 @@ public class Enemy : MonoBehaviour
             health -= 1f;
             
         }
-
-
     }
-   
+
+
+
     IEnumerator Die()
     {
         if (health <= 0)

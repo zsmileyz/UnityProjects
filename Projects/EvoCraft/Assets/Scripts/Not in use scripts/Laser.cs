@@ -34,7 +34,9 @@ public class Laser : MonoBehaviour
     {
         if(hit.tag == "Enemy")
         {
+            Destroy(gameObject);
             Debug.Log("HitEnemy!!");
+            
         }
 
         

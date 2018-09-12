@@ -5,21 +5,27 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
-    public float health = 3;
+    public static float health = 3;
     public bool isDead = false;
     public bool damaged = false;
 
 
+    private void Awake()
+    {
+
+    }
+
 
     void Start ()
     {
-		
+        
 	}
 	
 
 	void Update ()
     {
-        Controller();      
+        Controller();
+        Die();
     }
 
         void Controller()
@@ -45,24 +51,15 @@ public class Player : MonoBehaviour
          }
         }
 
-    private void OnCollisionEnter(Collision hit)
-    {
-        if (hit.gameObject.tag == "Enemy")
-        {
-            health -= 1f;
-            Debug.Log("hit");
-        }
-        if (health <= 0)
-        {
-            Die();
-            Debug.Log("DEAD!");
-        }
-    }
 
-    
+
     void Die()
     {
-        Destroy(gameObject);
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
 
