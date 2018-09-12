@@ -36,7 +36,8 @@ public class Laser : MonoBehaviour
         {
             Debug.Log("HitEnemy!!");
         }
-            
+
+        
         
     }
 

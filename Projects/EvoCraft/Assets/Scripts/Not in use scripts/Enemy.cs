@@ -15,7 +15,9 @@ public class Enemy : MonoBehaviour
 
 
 
-
+    private void Awake()
+    {
+    }
 
 
 
@@ -42,7 +44,7 @@ public class Enemy : MonoBehaviour
         }        
         if(health <= 0)
         {
-            transform.Translate(5f * Time.deltaTime, -1f * Time.deltaTime, 0f);
+            transform.Translate(0.1f * Time.deltaTime, -1f * Time.deltaTime, 0f);
         }
         
     }
@@ -54,6 +56,8 @@ public class Enemy : MonoBehaviour
             health -= 1f;
             
         }
+
+
     }
    
     IEnumerator Die()

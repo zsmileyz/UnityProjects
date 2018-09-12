@@ -10,6 +10,8 @@ public class GunBarrel : MonoBehaviour
 
     public float fireRate = 1f;
 
+    
+
 
 	void Start ()
     {
