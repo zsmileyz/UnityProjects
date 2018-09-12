@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float damage = 10f;
 
     public float health = 1f;
+
+    public int scoreValue = 1;
 
 
 
@@ -19,7 +22,6 @@ public class Enemy : MonoBehaviour
 
     void Start ()
     {
-        
 
     }
 	
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour
         {
 
             yield return new WaitForSeconds(1f);
+            Score.score += scoreValue;
             Destroy(gameObject);
             Debug.Log("DEAD");
         }
