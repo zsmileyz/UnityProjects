@@ -7,6 +7,7 @@ public class Drawing : MonoBehaviour
     public GameObject card;
     public GameObject card1;
 
+    
 
 	void Start () 
 	{
@@ -19,7 +20,10 @@ public class Drawing : MonoBehaviour
         
     }
 
-
+    void StartingHand()
+    {
+        
+    }
 
     IEnumerator StartingDraw()
     {
