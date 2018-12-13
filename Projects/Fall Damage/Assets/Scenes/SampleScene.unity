@@ -502,6 +502,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599127106}
+  - component: {fileID: 599127108}
+  - component: {fileID: 599127107}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -523,6 +525,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599127107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599127105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe27bdcd94a8f47498d591f9756cd19d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &599127108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599127105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00bed7fa937c04449f3a11d0265076d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitForce: 0.5
 --- !u!1 &680588247
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +939,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 72
+  m_Constraints: 90
   m_CollisionDetection: 0
 --- !u!1 &872200454
 GameObject:
@@ -1537,7 +1563,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 90
   m_CollisionDetection: 0
 --- !u!65 &1472819719
 BoxCollider:
