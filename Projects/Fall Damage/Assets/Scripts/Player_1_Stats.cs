@@ -7,6 +7,8 @@ public class Player_1_Stats : MonoBehaviour
 
     public float hitForce = 0.5f;
 
+    
+
 	void Start () 
 	{
 		
@@ -14,9 +16,18 @@ public class Player_1_Stats : MonoBehaviour
 	
 	void Update () 
 	{
-		
+        
 	}
 	
-	
-	
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Pit")
+            {
+                Destroy(gameObject);
+            }
+        }
+
+
+    
 }
