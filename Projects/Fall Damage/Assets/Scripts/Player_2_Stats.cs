@@ -16,7 +16,14 @@ public class Player_2_Stats : MonoBehaviour
 	{
 		
 	}
-	
-	
-	
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Pit")
+        {
+            Destroy(gameObject);
+            Debug.Log("death");
+        }
+    }
+
 }

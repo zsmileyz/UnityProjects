@@ -25,6 +25,7 @@ public class Player_1_Stats : MonoBehaviour
             if (collision.gameObject.tag == "Pit")
             {
                 Destroy(gameObject);
+            Debug.Log("death");
             }
         }
 
