@@ -1,8 +1,62 @@
 fileFormatVersion: 2
 guid: 614b35ba7e839974592ff42eb0c1ad4a
 ModelImporter:
-  serializedVersion: 24
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: joint10
+    100004: joint11
+    100006: joint12
+    100008: joint13
+    100010: joint14
+    100012: joint15
+    100014: joint16
+    100016: joint17
+    100018: joint18
+    100020: joint19
+    100022: joint20
+    100024: joint21
+    100026: joint9
+    100028: pCylinder1
+    100030: polySurface1
+    100032: polySurface2
+    100034: pSphere1
+    100036: pSphere2
+    100038: pSphere3
+    100040: transform1
+    400000: //RootNode
+    400002: joint10
+    400004: joint11
+    400006: joint12
+    400008: joint13
+    400010: joint14
+    400012: joint15
+    400014: joint16
+    400016: joint17
+    400018: joint18
+    400020: joint19
+    400022: joint20
+    400024: joint21
+    400026: joint9
+    400028: pCylinder1
+    400030: polySurface1
+    400032: polySurface2
+    400034: pSphere1
+    400036: pSphere2
+    400038: pSphere3
+    400040: transform1
+    2100000: lambert1
+    4300000: pSphere1
+    4300002: pCylinder1
+    4300004: polySurface1
+    4300006: polySurface2
+    4300008: pSphere3
+    9500000: //RootNode
+    13700000: pCylinder1
+    13700002: polySurface1
+    13700004: polySurface2
+    13700006: pSphere1
+    13700008: pSphere3
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +91,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -45,13 +98,10 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -65,9 +115,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

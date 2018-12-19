@@ -1,8 +1,25 @@
 fileFormatVersion: 2
 guid: f207d58be0b7b60459780bc7a515a130
 ModelImporter:
-  serializedVersion: 24
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: nurbsCube1
+    100004: nurbsCube2
+    100006: pCube1
+    100008: pCube2
+    400000: //RootNode
+    400002: nurbsCube1
+    400004: nurbsCube2
+    400006: pCube1
+    400008: pCube2
+    2100000: lambert1
+    2300000: pCube1
+    2300002: pCube2
+    3300000: pCube1
+    3300002: pCube2
+    4300000: pCube1
+    4300002: pCube2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +54,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -45,13 +61,10 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -65,9 +78,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

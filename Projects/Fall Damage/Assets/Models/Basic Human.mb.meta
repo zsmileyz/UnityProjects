@@ -1,8 +1,42 @@
 fileFormatVersion: 2
 guid: 348cece36ff32e64b90b0a6c388e252e
 ModelImporter:
-  serializedVersion: 24
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCylinder1
+    100004: polySurface1
+    100006: polySurface2
+    100008: pSphere1
+    100010: pSphere2
+    100012: pSphere3
+    100014: transform1
+    400000: //RootNode
+    400002: pCylinder1
+    400004: polySurface1
+    400006: polySurface2
+    400008: pSphere1
+    400010: pSphere2
+    400012: pSphere3
+    400014: transform1
+    2100000: lambert1
+    2300000: pCylinder1
+    2300002: polySurface1
+    2300004: polySurface2
+    2300006: pSphere1
+    2300008: pSphere3
+    3300000: pCylinder1
+    3300002: polySurface1
+    3300004: polySurface2
+    3300006: pSphere1
+    3300008: pSphere3
+    4300000: pSphere1
+    4300002: pCylinder1
+    4300004: polySurface1
+    4300006: polySurface2
+    4300008: pSphere3
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -15,7 +49,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -23,7 +58,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -37,7 +72,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -45,13 +79,10 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -59,21 +90,58 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
-    skeleton: []
+    skeleton:
+    - name: Basic Human(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere1
+      parentName: Basic Human(Clone)
+      position: {x: -0, y: 5.200937, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder1
+      parentName: Basic Human(Clone)
+      position: {x: -0, y: 3.2761703, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.616742, y: 1, z: 0.5970622}
+    - name: pSphere2
+      parentName: Basic Human(Clone)
+      position: {x: 1.0134586, y: 0, z: 0}
+      rotation: {x: 0, y: 0.38571784, z: -0, w: 0.9226168}
+      scale: {x: 0.68481237, y: 0.4187069, z: 0.3681855}
+    - name: polySurface1
+      parentName: pSphere2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface2
+      parentName: pSphere2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform1
+      parentName: pSphere2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere3
+      parentName: Basic Human(Clone)
+      position: {x: 0.7112224, y: 2.5895414, z: 0.9580127}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.36969417, y: 0.3073396, z: 0.33165962}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -83,10 +151,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
