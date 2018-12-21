@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 7177405659767046728}
   - component: {fileID: 7479645421833760617}
   - component: {fileID: 7073466359850332124}
+  - component: {fileID: 7831284307310737470}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Untagged
@@ -418,3 +419,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.941894, y: 6.3627944, z: 1}
   m_Center: {x: -0.17063609, y: 6.2402115, z: 0}
+--- !u!65 &7831284307310737470
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153264058449698094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.295552, y: 19.644703, z: 6.206984}
+  m_Center: {x: 0.33792877, y: 6.258705, z: -0.0112084765}

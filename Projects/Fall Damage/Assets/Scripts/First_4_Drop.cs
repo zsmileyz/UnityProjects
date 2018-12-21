@@ -22,10 +22,8 @@ public class First_4_Drop : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Drop();
-        Debug.Log("test");
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
-        Debug.Log("death cube");
     }
 
     void Drop()
