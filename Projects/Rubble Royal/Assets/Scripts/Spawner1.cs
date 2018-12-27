@@ -6,6 +6,7 @@ public class Spawner1 : MonoBehaviour
 {
 
     public GameObject gun;
+    public float time = 5f;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Spawner1 : MonoBehaviour
 
     IEnumerator Drop()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(time);
         Gun();
         Debug.Log("drop!");
     }

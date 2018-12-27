@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner2 : MonoBehaviour
 {
     public GameObject umbrella;
+    public float time = 5f;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class Spawner2 : MonoBehaviour
 
     IEnumerator Drop()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(time);
         Umbrella();
         Debug.Log("drop!");
     }

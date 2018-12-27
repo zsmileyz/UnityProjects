@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pit
   - Item
+  - Gun
+  - Umbrella
   layers:
   - Default
   - TransparentFX

@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Player_1_Controller : MonoBehaviour
 {
-
+    public GameObject Gun;
+    public GameObject Umbrella;
     public float speed = 5;
+    
 
     void Start()
     {
@@ -16,7 +19,12 @@ public class Player_1_Controller : MonoBehaviour
     void Update()
     {
         Controller();
+        
     }
+
+
+
+
 
     void Controller()
     {
@@ -62,11 +70,20 @@ public class Player_1_Controller : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Item")
+        if (other.tag == "Gun")
         {
             if (Input.GetKeyDown("e"))
             {
                 Destroy(other.gameObject);
+                Gun.SetActive(true);
+            }
+        }
+        if (other.tag == "Umbrella")
+        {
+            if (Input.GetKeyDown("e"))
+            {
+                Destroy(other.gameObject);
+                Umbrella.SetActive(true);
             }
         }
     }
