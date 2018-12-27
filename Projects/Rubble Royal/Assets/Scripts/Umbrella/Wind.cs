@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Beam : MonoBehaviour
+public class Wind : MonoBehaviour
 {
 
     public float speed = 5f;
@@ -13,21 +13,22 @@ public class Beam : MonoBehaviour
     }
 
 
-
     void Update()
     {
-        beam();
-        StartCoroutine(Blast());
+        StartCoroutine(End());
+        Attack();
     }
 
-    void beam()
+    void Attack()
     {
         transform.Translate(-speed * Time.deltaTime, 0, 0);
     }
 
-    IEnumerator Blast()
+
+    IEnumerator End()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
+
 }
