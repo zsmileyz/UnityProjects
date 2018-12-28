@@ -6,15 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Start_Button : MonoBehaviour
 {
-    public class Control : MonoBehaviour
+
+    public void Play()
     {
-
-        public void LoadScene(Scene.Battle)
-        {
-            Application.LoadLevel(2);
-        }
-
-
-
+        SceneManager.LoadScene(1);
     }
 }

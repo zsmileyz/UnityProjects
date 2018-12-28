@@ -8,6 +8,7 @@ public class Player_1_Controller : MonoBehaviour
     public GameObject Gun;
     public GameObject Umbrella;
     public float speed = 5;
+    public GameObject esc_Menu;
     
 
     void Start()
@@ -55,6 +56,10 @@ public class Player_1_Controller : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = 5;
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            esc_Menu.SetActive(true);
         }
     }
 
