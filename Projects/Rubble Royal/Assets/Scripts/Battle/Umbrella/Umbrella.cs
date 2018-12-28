@@ -20,10 +20,10 @@ public class Umbrella : MonoBehaviour
 
     void Action()
     {
-        if (Input.GetKey("f"))
+        if (Input.GetKeyDown("f"))
         {
             m_Animator.SetBool("Is_Attacking", true);
-            Wind();
+            
         }
         if (Input.GetKeyUp("f"))
         {
@@ -31,11 +31,6 @@ public class Umbrella : MonoBehaviour
         }
     }
 
-    void Wind()
-    {
-        Instantiate(wind, transform.position, Quaternion.identity);
-       
-        
-    }
+
 
 }

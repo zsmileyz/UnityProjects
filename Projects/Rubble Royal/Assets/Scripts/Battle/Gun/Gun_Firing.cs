@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Gun_Firing : MonoBehaviour
 {
-
     public GameObject beam;
+    private float cooldown = 0;
+    private const float ShootInterval = 1f;
 
     void Start()
     {
@@ -15,19 +16,24 @@ public class Gun_Firing : MonoBehaviour
 
     void Update()
     {
-        Action();
+        Shoot();
+        cooldown -= Time.deltaTime;
     }
 
     void Action()
     {
         if(Input.GetKey("f"))
         {
-            Firing();
+            Instantiate(beam, transform.position, Quaternion.identity);
         }
     }
 
-    void Firing()
+    void Shoot()
     {
-        Instantiate(beam, transform.position, Quaternion.identity);
+        if (cooldown > 0)
+            return;
+
+        Action();
+        cooldown = ShootInterval;
     }
 }
