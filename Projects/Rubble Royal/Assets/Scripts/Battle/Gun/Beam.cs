@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Beam : MonoBehaviour
 {
-
     public float speed = 5f;
+
+    public GameObject hit;
+
+    public GameObject player_1;
+
+
 
     void Start()
     {
@@ -29,5 +34,15 @@ public class Beam : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         Destroy(gameObject);
+    }
+
+    void OntriggerEnter(Collider beam)
+    {
+        if(beam.CompareTag("Player"))
+        {
+ 
+
+            Destroy(gameObject);
+        }
     }
 }
