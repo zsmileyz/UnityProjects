@@ -6,7 +6,7 @@ public class Gun_Firing : MonoBehaviour
 {
     public GameObject beam;
     private float cooldown = 0;
-    private const float ShootInterval = 1f;
+    private const float ShootInterval = 0f;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class Gun_Firing : MonoBehaviour
 
     void Action()
     {
-        if(Input.GetKey("f"))
+        if(Input.GetKeyDown("f"))
         {
             Instantiate(beam, transform.position, Quaternion.identity);
         }

@@ -6,15 +6,15 @@ public class Beam : MonoBehaviour
 {
     public float speed = 5f;
 
-    public GameObject hit;
+    public Rigidbody rb;
 
     public GameObject player_1;
 
-
+    public float force = 5f;
 
     void Start()
     {
-        
+        Rigidbody rb = GetComponent<Rigidbody>();
     }
 
 
@@ -36,11 +36,15 @@ public class Beam : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OntriggerEnter(Collider beam)
+    
+    
+    void OnCollisionEnter(Collision other)
     {
-        if(beam.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
- 
+            Debug.Log("hit!");
+
+            rb.AddForce(transform.forward * force);
 
             Destroy(gameObject);
         }
