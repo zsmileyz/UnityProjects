@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Beam : MonoBehaviour
 {
-
     public float speed = 5f;
+
+    public Rigidbody rb;
+
+    public GameObject player_1;
+
+    public float force = 5f;
 
     void Start()
     {
-        
+        Rigidbody rb = GetComponent<Rigidbody>();
     }
 
 
@@ -29,5 +34,19 @@ public class Beam : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         Destroy(gameObject);
+    }
+
+    
+    
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("hit!");
+
+            rb.AddForce(transform.forward * force);
+
+            Destroy(gameObject);
+        }
     }
 }
