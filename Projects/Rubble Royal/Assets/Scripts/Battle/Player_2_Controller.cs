@@ -1,18 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_2_Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float red = 0;
+    public float win = 5;
+
+    public Text Score;
+
+    public bool is_Dead = false;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+       
+    }
+
+    
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Pit"))
+        {
+            red += 1;
+            Score.text = red.ToString();
+            is_Dead = true;     
+            Destroy(gameObject);
+            Debug.Log(red);
+        }
+        if (red >= win)
+        {
+            Score.text = "You Win!";
+        }
     }
 }

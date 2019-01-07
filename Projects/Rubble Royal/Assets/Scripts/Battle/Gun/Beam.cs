@@ -6,7 +6,6 @@ public class Beam : MonoBehaviour
 {
     public float speed = 5f;
 
-    public Rigidbody rb;
 
     public GameObject player_1;
 
@@ -14,7 +13,7 @@ public class Beam : MonoBehaviour
 
     void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
+
     }
 
 
@@ -44,7 +43,7 @@ public class Beam : MonoBehaviour
         {
             Debug.Log("hit!");
 
-            rb.AddForce(transform.forward * force);
+            //addforce
 
             Destroy(gameObject);
         }

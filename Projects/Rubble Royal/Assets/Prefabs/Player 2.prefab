@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6134252267487668200}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,9 +45,10 @@ GameObject:
   - component: {fileID: 6134252268092209288}
   - component: {fileID: 6134252268092209291}
   - component: {fileID: 6134252268092209396}
+  - component: {fileID: 205024720}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0b4e4ab7e2d314691fc933fc8a49a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  red: 0
+  win: 5
+  Score: {fileID: 0}
 --- !u!65 &6134252268092209396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,3 +157,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1381465, y: 1.2974763, z: 1.0580125}
   m_Center: {x: -0.0098445425, y: -0.042859375, z: 0.029006839}
+--- !u!65 &205024720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134252268092209397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1789594, y: 1.1789597, z: 1.1789597}
+  m_Center: {x: 0.08947987, y: -1.339666e-17, z: 0.00000023842313}
