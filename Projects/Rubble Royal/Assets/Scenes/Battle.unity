@@ -921,7 +921,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 671513fbf4bdcb14186c686a539616fe,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 671513fbf4bdcb14186c686a539616fe,
         type: 3}
@@ -4370,6 +4370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beam: {fileID: 4531434960179993845, guid: dc96434d7655eeb4db90577dd337a0d2, type: 3}
+  reloadTime: 3
+  ammo: 4
 --- !u!1 &928964920
 GameObject:
   m_ObjectHideFlags: 0
@@ -8139,7 +8141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wind: {fileID: 9140118920679626055, guid: 3780bfa24c6235d469b75dc3ebb18d51, type: 3}
-  coolDownPeriodInSeconds: 5
+  reloadTime: 5
+  ammo: 4
 --- !u!1 &1669750344
 GameObject:
   m_ObjectHideFlags: 0
@@ -11150,6 +11153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6134252268092209397, guid: 162341d2f72635442b69d08532ab524c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6134252267487668200, guid: 162341d2f72635442b69d08532ab524c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11204,11 +11212,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6134252268092209397, guid: 162341d2f72635442b69d08532ab524c,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 162341d2f72635442b69d08532ab524c, type: 3}

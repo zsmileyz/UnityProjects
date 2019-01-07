@@ -4,31 +4,49 @@ using UnityEngine;
 
 public class Wind_Spawner : MonoBehaviour
 {
-
     public GameObject wind;
-    public float coolDownPeriodInSeconds = 10;
-    private float timeStamp;
+
+    public float reloadTime = 5f;
+    public float ammo = 4;
+
+    bool reloading = false;
 
     void Start()
     {
-        timeStamp = Time.time + coolDownPeriodInSeconds;
+
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        Wind();
+        StartCoroutine(Shoot());
+        Action();
     }
 
-    void Wind()
+    void Action()
     {
-        if (timeStamp <= Time.time)
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetKey("f"))
+            if (reloading != true && (ammo != 0))
             {
                 Instantiate(wind, transform.position, Quaternion.identity);
+                ammo -= 1f;
 
             }
+            if (ammo == 0)
+            {
+                reloading = true;
+            }
+        }
+    }
+
+    IEnumerator Shoot()
+    {
+        if (reloading == true)
+        {            
+            yield return new WaitForSeconds(reloadTime);
+            ammo = 4f;
+            reloading = false;
         }
     }
 

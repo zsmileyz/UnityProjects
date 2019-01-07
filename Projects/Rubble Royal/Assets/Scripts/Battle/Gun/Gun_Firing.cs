@@ -5,8 +5,11 @@ using UnityEngine;
 public class Gun_Firing : MonoBehaviour
 {
     public GameObject beam;
-    private float cooldown = 0;
-    private const float ShootInterval = 0f;
+
+    public float reloadTime = 5f;
+    public float ammo = 4;
+
+    bool reloading = false;
 
     void Start()
     {
@@ -14,26 +17,36 @@ public class Gun_Firing : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        Shoot();
-        cooldown -= Time.deltaTime;
+        StartCoroutine (Shoot());
+        Action();
     }
 
     void Action()
     {
-        if(Input.GetKeyDown("f"))
+        if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(beam, transform.position, Quaternion.identity);
+            if (reloading != true && (ammo != 0))
+            {
+                Instantiate(beam, transform.position, Quaternion.identity);
+                ammo -= 1f;
+                
+            }
+            if (ammo == 0)
+            {
+                reloading = true;
+            }
         }
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
-        if (cooldown > 0)
-            return;
-
-        Action();
-        cooldown = ShootInterval;
+        if (reloading == true)
+        {
+            yield return new WaitForSeconds(reloadTime);
+            ammo = 4f;
+            reloading = false;            
+        }
     }
 }
