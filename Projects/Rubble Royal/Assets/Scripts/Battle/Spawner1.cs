@@ -4,29 +4,56 @@ using UnityEngine;
 
 public class Spawner1 : MonoBehaviour
 {
+    public float time = 2f;
 
-    public GameObject gun;
-    public float time = 5f;
+    public int spawnee;
+
+    public GameObject[] itemList;
+    
+
+    public bool is_Falling = false;
 
     void Start()
     {
         StartCoroutine(Drop());
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        spawnee = Random.Range(0, itemList.Length);
         
     }
 
     void Gun()
     {
-        Instantiate(gun,transform.position,Quaternion.identity);
+        while (is_Falling == false)
+        {
+            
+            Instantiate(itemList[spawnee], transform.position, Quaternion.identity);
+            is_Falling = true;
+            break;
+            
+        }
+             
+    }
+
+    void plzWork()
+    {
+        is_Falling = false;
     }
 
     IEnumerator Drop()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time);        
         Gun();
-        Debug.Log("drop!");
+        yield return new WaitForSeconds(time);
+        plzWork();
+        StartCoroutine(Drop());
+
+
+
     }
+
+    
+
 }

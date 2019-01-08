@@ -299,10 +299,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d657f22145f4cc44a03f66a154d112b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  blue: 0
+  win: 5
   Gun: {fileID: 3244673728330843246}
   Umbrella: {fileID: 3244673729763299207}
-  speed: 5
   esc_Menu: {fileID: 0}
+  score: {fileID: 0}
+  is_Dead: 0
+  playerlocation: {fileID: 0}
+  player_1_respawner: {fileID: 0}
 --- !u!65 &5010321718920028967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -411,6 +417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponFan
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: bb77fdb9c7309794f9f765a66def49f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bb77fdb9c7309794f9f765a66def49f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -500,6 +511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WeaponLaser
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2feecc096e5c0b743b59932c5a62dbdf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2feecc096e5c0b743b59932c5a62dbdf,
         type: 3}
