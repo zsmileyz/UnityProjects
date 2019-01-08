@@ -16,6 +16,7 @@ public class ESC_Menu : MonoBehaviour
     public void Back()
     {
         esc_Menu.SetActive(false);
+        Time.timeScale = 1;
     }
 
 

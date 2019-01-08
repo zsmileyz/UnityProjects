@@ -60,6 +60,7 @@ public class Player_1_Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             esc_Menu.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
