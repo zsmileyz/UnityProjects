@@ -33,21 +33,14 @@ public class Player_2_Controller : MonoBehaviour
         Score.text = red.ToString();
         is_Dead = true;
         playerStartingPoint.transform.position = respawnPoint.transform.position;
-        Debug.Log(red);
+        is_Dead = false;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Pit"))
         {
-            StartCoroutine(respawner());
-           
-            
-            /*red += 1;
-            Score.text = red.ToString();
-            is_Dead = true;
-            playerStartingPoint.transform.position = respawnPoint.transform.position;
-            Debug.Log(red);*/
+            StartCoroutine(respawner());                     
         }
         if (red >= win)
         {

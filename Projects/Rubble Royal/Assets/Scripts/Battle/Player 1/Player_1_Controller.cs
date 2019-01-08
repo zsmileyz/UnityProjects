@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 
 public class Player_1_Controller : MonoBehaviour
 {
+    public float speed = 5;
+    public float blue = 0;
+    public float win = 5;
+
     public GameObject Gun;
     public GameObject Umbrella;
-    public float speed = 5;
     public GameObject esc_Menu;
-    
+
+    public Text score;
+
+    public bool is_Dead = false;
+
+    [SerializeField] private Transform playerlocation;
+    [SerializeField] private Transform player_1_respawner;
 
     void Start()
     {
@@ -68,8 +78,14 @@ public class Player_1_Controller : MonoBehaviour
     {
         if(other.tag == "Pit")
         {
-            Destroy(gameObject);
-            Debug.Log("Player1 Death!");
+            StartCoroutine(respawner());
+            if (blue >= win)
+            {
+                score.text = "You Win!";
+                Destroy(gameObject);
+                Time.timeScale = 0;
+            }
+
         }
 
     }
@@ -92,6 +108,17 @@ public class Player_1_Controller : MonoBehaviour
                 Umbrella.SetActive(true);
             }
         }
+    }
+
+    IEnumerator respawner()
+    {
+        yield return new WaitForSeconds(2f);
+        blue += 1;
+        score.text = blue.ToString();
+        is_Dead = true;
+        playerlocation.transform.position = player_1_respawner.transform.position;
+        is_Dead = false;
+        
     }
 
 

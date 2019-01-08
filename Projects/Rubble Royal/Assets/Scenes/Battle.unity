@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5000,7 +5000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031498677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.112, y: 0.29, z: -1.425}
+  m_LocalPosition: {x: 8.79, y: -0.11, z: -1.076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775909}
@@ -7842,7 +7842,7 @@ GameObject:
   - component: {fileID: 1612633863}
   - component: {fileID: 1612633862}
   m_Layer: 5
-  m_Name: Number
+  m_Name: Number2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10151,6 +10151,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017289841}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2036619491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5010321718920028965, guid: aa5a760420b59b0499c6b3588970fc35,
+    type: 3}
+  m_PrefabInstance: {fileID: 6784260002034464083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2038631492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11286,6 +11292,26 @@ PrefabInstance:
       propertyPath: esc_Menu
       value: 
       objectReference: {fileID: 1769143422}
+    - target: {fileID: 5010321718920028960, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1612633862}
+    - target: {fileID: 5010321718920028960, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: playerlocation
+      value: 
+      objectReference: {fileID: 2036619491}
+    - target: {fileID: 5010321718920028960, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: player_1_respawner
+      value: 
+      objectReference: {fileID: 1031498678}
+    - target: {fileID: 5010321718920028960, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: win
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1971517018740176509, guid: aa5a760420b59b0499c6b3588970fc35,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -11573,6 +11599,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3496909063191801167, guid: a9b19874b6ad2eb4196b8b35f80d206a,
         type: 3}
+    - target: {fileID: 681791031033492471, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200390442452610643, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200390442452610643, guid: aa5a760420b59b0499c6b3588970fc35,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.81
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5a760420b59b0499c6b3588970fc35, type: 3}
 --- !u!1001 &8979067734549099639
