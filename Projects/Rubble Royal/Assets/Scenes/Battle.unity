@@ -766,7 +766,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 181370393}
-  - component: {fileID: 181370394}
   m_Layer: 0
   m_Name: Player 2 Respawner
   m_TagString: Untagged
@@ -782,27 +781,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181370392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.87, y: -0.5, z: 0}
+  m_LocalPosition: {x: -7.79, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775909}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &181370394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181370392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
-  m_Script: {fileID: 11500000, guid: 316a0acfc077a0d4b87529c4b281e7cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player_2: {fileID: 6134252267487668201, guid: 162341d2f72635442b69d08532ab524c,
-    type: 3}
 --- !u!1 &213995688
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,6 +4167,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853996628}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &902591161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6134252268092209289, guid: 162341d2f72635442b69d08532ab524c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6134252267188670409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &918753111
 GameObject:
   m_ObjectHideFlags: 0
@@ -8291,7 +8281,7 @@ GameObject:
   - component: {fileID: 1680479172}
   - component: {fileID: 1680479171}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Pit
   m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11072,6 +11062,16 @@ PrefabInstance:
       propertyPath: Score
       value: 
       objectReference: {fileID: 2141193446}
+    - target: {fileID: 6134252268092209291, guid: 162341d2f72635442b69d08532ab524c,
+        type: 3}
+      propertyPath: playerStartingPoint
+      value: 
+      objectReference: {fileID: 902591161}
+    - target: {fileID: 6134252268092209291, guid: 162341d2f72635442b69d08532ab524c,
+        type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 181370393}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 162341d2f72635442b69d08532ab524c, type: 3}
 --- !u!1001 &6784260002034464083
