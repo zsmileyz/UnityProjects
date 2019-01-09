@@ -22,6 +22,7 @@ public class Wind : MonoBehaviour
     void Attack()
     {
         transform.Translate(-speed * Time.deltaTime, 0, 0);
+        
     }
 
 
