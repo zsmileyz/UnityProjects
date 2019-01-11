@@ -31,25 +31,25 @@ public class Player_1_Controller : MonoBehaviour
 
     void Controller()
     {
-        if (Input.GetKey("s"))
+        if (Input.GetKey("d"))
         {
             transform.Translate(speed * Time.deltaTime, 0, 0);
         }
-        if (Input.GetKey("w"))
+        if (Input.GetKey("a"))
         {
             transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("w"))
         {
             transform.Translate(0, speed * Time.deltaTime, 0);
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("s"))
         {
             transform.Translate(0, -speed * Time.deltaTime, 0);
         }
         if (Input.GetKey("space"))
         {
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            transform.Translate(0, 0, -speed * Time.deltaTime);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
