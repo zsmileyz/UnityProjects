@@ -312,9 +312,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8588538100099502088}
-  - component: {fileID: 551836262799161237}
   - component: {fileID: 5789447193679179298}
-  - component: {fileID: 685884615960968274}
+  - component: {fileID: 8115269929457691490}
+  - component: {fileID: 3558675989430540745}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Untagged
@@ -329,7 +329,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8535075556844743876}
-  m_LocalRotation: {x: -0.2217836, y: 0.41936967, z: 0.34226057, w: 0.81104803}
+  m_LocalRotation: {x: -0.22177897, y: 0.41937038, z: 0.34226245, w: 0.8110481}
   m_LocalPosition: {x: 1.9837, y: 0.27767777, z: -3.8587384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -338,25 +338,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -40.302002, y: 43.861004, z: 28.951002}
---- !u!95 &551836262799161237
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8535075556844743876}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1db38da97b6ad094dbca967f13dd370f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &5789447193679179298
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -373,8 +354,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &685884615960968274
-MeshCollider:
+--- !u!136 &8115269929457691490
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,7 +364,20 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_Mesh: {fileID: 4300000, guid: 1db38da97b6ad094dbca967f13dd370f, type: 3}
+  m_Radius: 0.5317189
+  m_Height: 1.0634379
+  m_Direction: 1
+  m_Center: {x: -0.00000024591645, y: 0.53500813, z: -0.11085047}
+--- !u!114 &3558675989430540745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535075556844743876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bd686be0b09c415429db504f877c7ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,9 +8,11 @@ public class Player_1_Controller : MonoBehaviour
 {
     public float speed = 5;
 
-    //public GameObject esc_Menu;
+    public Camera player;
 
     public bool is_Dead = false;
+
+    public GameObject pokeBall;
 
 
     void Start()
@@ -22,7 +24,7 @@ public class Player_1_Controller : MonoBehaviour
     void Update()
     {
         Controller();
-        
+        Capture();
     }
 
 
@@ -61,7 +63,31 @@ public class Player_1_Controller : MonoBehaviour
         }
     }
 
+    void Capture()
+    {
+        RaycastHit hit;      
+        Ray ray = player.ScreenPointToRay(Input.mousePosition);
 
+        if(Physics.Raycast(ray, out hit, 100.0f))
+        {
+            if(hit.transform != null)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    Debug.Log(hit.transform.name);
+                    Small_Monster smallM = hit.transform.GetComponent<Small_Monster>();
+                    if (smallM != null)
+                    {
+                        GameObject newitem = Instantiate(pokeBall,hit.point,Quaternion.LookRotation(hit.normal));
+                        smallM.CaptureChance();
+                        Destroy(newitem, 5f);
+                        hit.rigidbody.AddForce(-hit.normal * 30f);
+                    }
+                }
+                
+            }
+        }
+    }
 
 
 
