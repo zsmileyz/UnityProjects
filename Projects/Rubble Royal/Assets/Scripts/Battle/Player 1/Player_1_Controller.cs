@@ -15,6 +15,7 @@ public class Player_1_Controller : MonoBehaviour
     public GameObject esc_Menu;
 
     public Text score;
+    public Text player2_Wins;
 
     public bool is_Dead = false;
 
@@ -81,7 +82,7 @@ public class Player_1_Controller : MonoBehaviour
             StartCoroutine(respawner());
             if (blue >= win)
             {
-                score.text = "You Win!";
+                player2_Wins.enabled = true;
                 Destroy(gameObject);
                 Time.timeScale = 0;
             }
@@ -100,7 +101,7 @@ public class Player_1_Controller : MonoBehaviour
                 Gun.SetActive(true);
             }
         }
-        if (other.tag == "Umbrella")
+        if (other.tag == "Fan")
         {
             if (Input.GetKeyDown("e"))
             {

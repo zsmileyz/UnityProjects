@@ -9,6 +9,7 @@ public class Player_2_Controller : MonoBehaviour
     public float win = 5;
 
     public Text Score;
+    public Text player1_Wins;
 
     public bool is_Dead = false;
 
@@ -44,7 +45,7 @@ public class Player_2_Controller : MonoBehaviour
         }
         if (red >= win)
         {
-            Score.text = "You Win!";
+            player1_Wins.enabled = true;
             Destroy(gameObject);
             Time.timeScale = 0;
         }
