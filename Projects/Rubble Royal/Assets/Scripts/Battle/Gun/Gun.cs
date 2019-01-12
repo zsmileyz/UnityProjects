@@ -19,11 +19,11 @@ public class Gun : MonoBehaviour
 
     void Action()
     {
-        if (Input.GetKeyDown("f"))
+        if (Input.GetMouseButtonDown(1))
         {
             m_Animator.SetBool("If_Firing", true);
         }
-        if (Input.GetKeyUp("f"))
+        if (Input.GetMouseButtonUp(1))
         {
             m_Animator.SetBool("If_Firing", false);
         }
