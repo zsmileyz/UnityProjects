@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 6289030363962118358}
   m_Layer: 0
   m_Name: StoneMonster
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,6 +315,8 @@ GameObject:
   - component: {fileID: 5789447193679179298}
   - component: {fileID: 8115269929457691490}
   - component: {fileID: 3558675989430540745}
+  - component: {fileID: 5637891204514122648}
+  - component: {fileID: 5408731496711042661}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Untagged
@@ -381,3 +383,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd686be0b09c415429db504f877c7ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  captureChance: 0
+--- !u!114 &5637891204514122648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535075556844743876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 9796c5befc020074c95e90a78c2ac86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  type: Bomb
+  description: Not again!!!!
+  icon: {fileID: 2800000, guid: e3001b8bf1d411d449482317cfe99de6, type: 3}
+  pickedUp: 0
+--- !u!136 &5408731496711042661
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535075556844743876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.9138415
+  m_Height: 3.8276834
+  m_Direction: 1
+  m_Center: {x: -0.0000000017514941, y: 0.43519405, z: -0.27566767}
