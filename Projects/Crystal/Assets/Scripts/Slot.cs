@@ -24,4 +24,5 @@ public class Slot : MonoBehaviour
     {
         slotIconGO.GetComponent<Image>().sprite = icon;
     }
+    
 }
