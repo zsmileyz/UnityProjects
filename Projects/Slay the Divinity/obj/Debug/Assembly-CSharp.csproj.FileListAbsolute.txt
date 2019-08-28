@@ -1,0 +1,2 @@
+C:\Users\eko12339.Z\Desktop\Unity\UnityProjects\Projects\Slay the Divinity\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\eko12339.Z\Desktop\Unity\UnityProjects\Projects\Slay the Divinity\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
