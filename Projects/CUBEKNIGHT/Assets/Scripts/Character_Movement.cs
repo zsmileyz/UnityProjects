@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Character_Movement : MonoBehaviour
 {
-    public float movementSpeed = 0.01f;
+    public float movementSpeed = 3;
+    public float jumpHeight = 130f;
+    public float sprintSpeed = 5.2f;
 
+    public bool grounded = true;
 
 
     // Start is called before the first frame update
@@ -18,28 +21,61 @@ public class Character_Movement : MonoBehaviour
     void Update()
     {
         Controller();
+        Jump();
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
     void Controller()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(-movementSpeed, 0, 0);
+            transform.position += Vector3.left * movementSpeed * Time.deltaTime;
+            
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(movementSpeed, 0, 0);
+            transform.position += Vector3.right * movementSpeed * Time.deltaTime;
+            
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            transform.Translate(0,movementSpeed, 0);
+            movementSpeed = sprintSpeed;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            transform.Translate(0, -movementSpeed, 0);
+            movementSpeed = 3f;
         }
 
 
-        
+    }
+
+    void Jump()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            if(grounded == true)
+            {
+                transform.position += Vector3.up * jumpHeight * Time.deltaTime;
+                grounded = false;
+            }
+                  
+            if(grounded == false)
+            {
+                return;
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D ground)
+    {
+        if(ground.gameObject)
+        {
+            grounded = true;
+        }
     }
 }
